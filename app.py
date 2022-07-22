@@ -3,7 +3,7 @@ import numpy as np
 import plotly.express as px
 from pyproj import Transformer
 import plotly.graph_objects as go
-import base64
+#import base64
 
 
 x1 = -200
@@ -49,7 +49,7 @@ app = Dash(__name__)
 
 
 image_filename = 'TUD_logo.png' # replace with your own image
-encoded_image = base64.b64encode(open(image_filename, 'rb').read())
+#encoded_image = base64.b64encode(open(image_filename, 'rb').read())
 
 
 app.layout = html.Div([
@@ -81,7 +81,7 @@ app.layout = html.Div([
     html.Hr(),
     html.P([
             html.P(["ⒸReimann und Grabow, 2022"],style={"float": "right"}),
-            html.Img(src='data:image/png;base64,{}'.format(encoded_image.decode()),
+            html.Img(src="TUD_logo.png"), #'data:image/png;base64,{}'.format(encoded_image.decode()
                     height=50)
         ])
 ])
