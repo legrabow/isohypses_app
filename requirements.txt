@@ -2,5 +2,5 @@ dash
 numpy
 plotly.express
 pyproj
-plotly.graph_objects
+plotly
 base64
