@@ -1,5 +1,4 @@
-dash
-numpy
-plotly.express
-pyproj
-plotly
+dash==2.6.0
+numpy==1.23.1
+pyproj==3.3.1
+plotly==5.9.0
