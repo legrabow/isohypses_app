@@ -53,6 +53,7 @@ image_filename = 'TUD_logo.png' # replace with your own image
 app.layout = html.Div([
     html.H1('Trennstromlinie', style={"text-align":"center"}),
     html.H4('Für einen gespannten, stationären Grundwasserleiter mit 120m Mächtigkeit', style={"text-align":"center"}),
+    html.H4('Natürliche Anstromrichtung 241°WSW', style={"text-align":"center"}),
     dcc.Graph(id="graph", style={'height': '70vh'}),
     html.Label('Entnahmerate in l/s'),
     dcc.Slider(id="Q",
