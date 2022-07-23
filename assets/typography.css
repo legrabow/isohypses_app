@@ -1,15 +1,15 @@
 @font-face {
   font-family: "Open Sans";
-  src: local("/fonts/OpenSans-Bold.ttf") format("truetype"),
-       local("/fonts/OpenSans-BoldItalic.ttf") format("truetype"),
-       local("/fonts/OpenSans-ExtraBold.ttf") format("truetype"),
-       local("/fonts/OpenSans-ExtraBoldItalic.ttf") format("truetype"),
-       local("/fonts/OpenSans-Italic.ttf") format("truetype"),
-       local("/fonts/OpenSans-Light.ttf") format("truetype"),
-       local("/fonts/OpenSans-LightItalic.ttf") format("truetype"),
-       local("/fonts/OpenSans-Regular.ttf") format("truetype"),
-       local("/fonts/OpenSans-SemiBold.ttf") format("truetype"),
-       local("/fonts/OpenSans-SemiBoldItalic.ttf") format("truetype");
+  src: url("fonts/OpenSans-Bold.ttf") format("truetype"),
+       url("fonts/OpenSans-BoldItalic.ttf") format("truetype"),
+       url("fonts/OpenSans-ExtraBold.ttf") format("truetype"),
+       url("fonts/OpenSans-ExtraBoldItalic.ttf") format("truetype"),
+       url("fonts/OpenSans-Italic.ttf") format("truetype"),
+       url("fonts/OpenSans-Light.ttf") format("truetype"),
+       url("fonts/OpenSans-LightItalic.ttf") format("truetype"),
+       url("fonts/OpenSans-Regular.ttf") format("truetype"),
+       url("fonts/OpenSans-SemiBold.ttf") format("truetype"),
+       url("fonts/OpenSans-SemiBoldItalic.ttf") format("truetype");
 }
 
 
