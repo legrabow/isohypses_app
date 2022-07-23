@@ -3,4 +3,3 @@ numpy
 plotly.express
 pyproj
 plotly
-base64
