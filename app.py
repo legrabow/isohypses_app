@@ -66,7 +66,7 @@ app.layout = html.Div([
             min=0.0001,
             max=0.001,
             marks={i: f'{i}'for i in np.round(np.arange(0.0001, 0.0011, 0.0001), 6)},
-            value=0.0004
+            value=0.0006
         ),
 
     html.Label('Hydraulischer Hintergrundgradient in m/m'),
@@ -144,7 +144,7 @@ def getXYtrennstromlinie(Q, K, grad):
     return y_plot, x_plot
 
 
-y_plot_init, x_plot_init = getXYtrennstromlinie(Q=100, K=0.0004, grad=0.0017)
+y_plot_init, x_plot_init = getXYtrennstromlinie(Q=100, K=0.0006, grad=0.0017)
 fig = go.Figure(data=go.Scattermapbox(
     lon = y_plot_init,
     lat = x_plot_init,
