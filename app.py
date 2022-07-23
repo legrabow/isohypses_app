@@ -81,7 +81,7 @@ app.layout = html.Div([
     html.Hr(),
     html.P([
             html.P(["ⒸReimann und Grabow, 2022"],style={"float": "right"}),
-            html.Img(src="TUD_logo.png", #'data:image/png;base64,{}'.format(encoded_image.decode()
+            html.Img(src=app.get_asset_url('TUD_logo.png'),#"", #'data:image/png;base64,{}'.format(encoded_image.decode()
                     height=50)
         ])
 ])
