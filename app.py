@@ -3,7 +3,6 @@ import numpy as np
 import plotly.express as px
 from pyproj import Transformer
 import plotly.graph_objects as go
-#import base64
 
 
 x1 = -200
@@ -49,20 +48,20 @@ app = Dash(__name__)
 
 
 image_filename = 'TUD_logo.png' # replace with your own image
-#encoded_image = base64.b64encode(open(image_filename, 'rb').read())
 
 
 app.layout = html.Div([
     html.H1('Trennstromlinie', style={"text-align":"center"}),
+    html.H4('Für einen gespannten, stationären Grundwasserleiter mit 120m Mächtigkeit', style={"text-align":"center"}),
     dcc.Graph(id="graph", style={'height': '70vh'}),
-    html.Label('Entnahmerate Q in l/s'),
+    html.Label('Entnahmerate in l/s'),
     dcc.Slider(id="Q",
             min=0,
             max=1000,
             #marks={i: f"{i}" for i in np.arange(0., 1100., 100)},
             value=100,
         ),
-    html.Label('Hydraulische Leitfähigkeit K in m/s'),
+    html.Label('Hydraulische Leitfähigkeit in m/s'),
     dcc.Slider(id="K",
             min=0.0001,
             max=0.001,
@@ -70,18 +69,17 @@ app.layout = html.Div([
             value=0.0004
         ),
 
-    html.Label('Hydraulischer Hintergrundgradient i in m/m'),
+    html.Label('Hydraulischer Hintergrundgradient in m/m'),
     dcc.Slider(id="grad",
             min=0,
             max=0.01,
             #marks={i: f'Label {i}' if i == 1 else str(i) for i in range(1, 6)},
             value=0.0017,
         ),
-
     html.Hr(),
     html.P([
             html.P(["ⒸReimann und Grabow, 2022"],style={"float": "right"}),
-            html.Img(src=app.get_asset_url('TUD_logo.png'),#"", #'data:image/png;base64,{}'.format(encoded_image.decode()
+            html.Img(src=app.get_asset_url('TUD_logo.png'),
                     height=50)
         ])
 ])
