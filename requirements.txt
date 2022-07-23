@@ -3,3 +3,4 @@ numpy==1.23.1
 pyproj==3.3.1
 plotly==5.9.0
 gunicorn
+pandas==1.4.3
