@@ -77,7 +77,7 @@ def x0_conf(Q, K, grad, b):
 
 def getXYtrennstromlinie(Q, K, grad, b, winkel):
     # Create forward rotation matrix
-    theta = np.radians(275-winkel)
+    theta = np.radians(274-winkel)
     c, s = np.cos(theta), np.sin(theta)
     rotation_matrix = np.array(((c, -s), (s, c)))
 
