@@ -45,17 +45,17 @@ app.layout = html.Div([
         ),
     html.Label('Aquifermächtigkeit in m'),
     dcc.Slider(id="b",
-            min=0,
-            max=0.01,
+            min=80,
+            max=160,
             #marks={i: f'Label {i}' if i == 1 else str(i) for i in range(1, 6)},
-            value=0.0017,
+            value=120,
         ),
     html.Label('Drehwinkel der Anstromrichtung in °'),
     dcc.Slider(id="winkel",
             min=0,
-            max=0.01,
+            max=360,
             #marks={i: f'Label {i}' if i == 1 else str(i) for i in range(1, 6)},
-            value=0.0017,
+            value=200,
         ),
     html.Hr(),
     html.P([
@@ -77,7 +77,7 @@ def x0_conf(Q, K, grad, b):
 
 def getXYtrennstromlinie(Q, K, grad, b, winkel):
     # Create forward rotation matrix
-    theta = np.radians(360 - winkel)
+    theta = np.radians(270-winkel)
     c, s = np.cos(theta), np.sin(theta)
     rotation_matrix = np.array(((c, -s), (s, c)))
 
@@ -109,7 +109,7 @@ def getXYtrennstromlinie(Q, K, grad, b, winkel):
     return y_plot, x_plot
 
 
-y_plot_init, x_plot_init = getXYtrennstromlinie(Q=100, K=0.0006, grad=0.0017, b=120, winkel=29)
+y_plot_init, x_plot_init = getXYtrennstromlinie(Q=100, K=0.0006, grad=0.0017, b=120, winkel=200)
 fig = go.Figure(data=go.Scattermapbox(
     lon = y_plot_init,
     lat = x_plot_init,
@@ -154,4 +154,4 @@ def TSL_conf(Q, K, grad, b, winkel):
 server = app.server
 
 if __name__ == '__main__':
-    app.run_server(debug=False)
+    app.run_server(debug=True)
