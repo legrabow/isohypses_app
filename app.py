@@ -54,7 +54,7 @@ app.layout = html.Div([
     dcc.Slider(id="winkel",
             min=0,
             max=360,
-            #marks={i: f'Label {i}' if i == 1 else str(i) for i in range(1, 6)},
+            marks={i: {i} for i in np.linspace(0,360, 7)},
             value=200,
         ),
     html.Hr(),
@@ -128,7 +128,7 @@ fig.add_trace(
         name = "Brunnen"
 ))
 fig.update_mapboxes(style="open-street-map",
-               zoom = 11,
+               zoom = 12,
                center={
                "lat":brunnen_x_plot,
                "lon":brunnen_y_plot})
