@@ -77,7 +77,7 @@ def x0_conf(Q, K, grad, b):
 
 def getXYtrennstromlinie(Q, K, grad, b, winkel):
     # Create forward rotation matrix
-    theta = np.radians(winkel)
+    theta = np.radians(360 - winkel)
     c, s = np.cos(theta), np.sin(theta)
     rotation_matrix = np.array(((c, -s), (s, c)))
 
@@ -139,9 +139,9 @@ fig.update_layout(uirevision="Don't change"
     Output("graph", "figure"),
     Input("Q", "value"),
     Input("K", "value"),
-    Input("grad", "value"))
-    Input("b", "value"))
-    Input("winkel", "value")
+    Input("grad", "value"),
+    Input("b", "value"),
+    Input("winkel", "value"))
 def TSL_conf(Q, K, grad, b, winkel):
 
     y_plot, x_plot = getXYtrennstromlinie(Q, K, grad,b ,winkel)
