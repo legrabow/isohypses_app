@@ -54,7 +54,7 @@ app.layout = html.Div([
     dcc.Slider(id="winkel",
             min=0,
             max=360,
-            marks={int(i): f'{i}'for i in np.linspace(0,360, 7)},
+            marks={int(i): f'{int(i)}'for i in np.linspace(0,360, 7)},
             value=200,
         ),
     html.Hr(),
